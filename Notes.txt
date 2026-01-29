@@ -1,0 +1,25 @@
+Node is a runtime environment 
+
+ExpressJS is a framework which is used to handle requests and generates corresponding 
+response. It is also used to create APIs, routes etc.
+Express takes care of all the things from the incoming request to outgoing response.
+
+npx nodemon script.js is used to automatically reloads after any change
+
+Middleware - Middleware is used between, when server accepted user request and routing.
+             Without Middleware request directly goes to route from server.
+
+__dirname - dirname shows the path from starting to current folder 
+            example - /home/user1/Arjun/ExpressJs/Practice
+
+
+res.render("index") - is used to render index.ejs or any page.
+
+:username - this colon will create dynamic route.
+
+req.params.anything - req.params is used for the value which is after colon(:)
+
+
+
+
+
