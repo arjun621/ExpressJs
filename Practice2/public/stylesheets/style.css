@@ -76,3 +76,22 @@ body {
 a.edit {
     color: gray;
 }
+
+h4 {
+    display: inline-block;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete {
+  display: inline-block;     
+  padding: 2px 8px;
+  background-color: #d12b2b;
+  text-decoration: none;      
+  border-radius: 6px;
+  font-weight: 300;
+}
+

@@ -22,10 +22,13 @@
             <% if (files.length> 0) { %>
                 <% files.forEach(function(val) { %>
                     <div class="task">
-                        <h4><%= val %></h4>
+                        <div class="top">
+                            <h4><%= val %></h4>
+                            <a class="delete" href="/delete/<%= val %>">Del</a>
+                        </div>
                         <div class="a-tag">
                             <a href="/files/<%= val %>">Read more.</a>
-                            <a href="" class="edit" >edit filename.</a>
+                            <a href="/edit/<%= val %>" class="edit" >edit filename.</a>
                         </div>
                     </div>
             <% }); %>
@@ -33,7 +36,6 @@
                     <h3>No tasks available.</h3>
                 <% } %>
         </div>
-
 
     </div>
 </body>

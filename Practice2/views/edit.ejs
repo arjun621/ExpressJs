@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/edit.css">
 </head>
+
 <body>
-    <h1>Hello</h1>
+    <div class="container">
+        <a href="/">back to home</a>
+        <div class="form">
+            <form action="/edit" method="post">
+                <input class="title" type="text" placeholder="Old name of file" name="old" value="<%= filename %>">
+                <textarea placeholder="New name of the file" id="" name="new"></textarea>
+                <input class="btn" type="submit" value="Rename">
+            </form>
+        </div>
+    </div>
+
 </body>
+
 </html>
