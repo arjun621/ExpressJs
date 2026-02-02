@@ -19,7 +19,10 @@ res.render("index") - is used to render index.ejs or any page.
 
 req.params.anything - req.params is used for the value which is after colon(:)
 
+npm init -y - it is used to create package.json file.
 
+mongoose is used to communicate between node server and mongodb server.
 
+Every mongoose code is asynchronous and we have to use async await for that.
 
-
+css - we can use required keyword in input field so input cant remain empty

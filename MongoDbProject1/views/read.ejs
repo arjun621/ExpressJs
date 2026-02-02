@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/read.css">
+</head>
+<body>
+    <a class="back" href="/">Back to home</a>
+    <h1>View Users</h1>
+
+    <div class="container">
+        <% if(users.length > 0){ %>
+            <% users.forEach(function(e) { %>
+            <div class="users">
+                <div class="image">
+                    <img src="<%= e.image %>" alt="">
+                </div>
+                <h3><%= e.name %></h3>
+                <h5><%= e.email %></h5>
+                <div class="btn">
+                    <a href="/edit/<%= e._id%>">Edit User</a>
+                    <a class="del" href="/delete/<%= e._id %>">Delete User</a>
+                </div>
+            </div>
+        <% }) %>
+        <% } else{ %>
+            <h4>No users.</h4>
+        <% } %>
+    </div>
+</body>
+</html>
