@@ -32,6 +32,4 @@ app.get("/delete", async (req,res) => {
     res.send(deleteuser);
 })
 
-
-
 app.listen(3000);
