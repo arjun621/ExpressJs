@@ -15,7 +15,7 @@
 
     app.get("/read", async (req, res) => {
         let users = await userModel.find();
-        res.render("read", {users});
+        res.render("read", {users});        
     })
 
     app.get("/delete/:id", async (req, res) => {

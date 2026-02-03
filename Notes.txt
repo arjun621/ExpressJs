@@ -12,6 +12,7 @@ Middleware - Middleware is used between, when server accepted user request and r
 __dirname - dirname shows the path from starting to current folder 
             example - /home/user1/Arjun/ExpressJs/Practice
 
+app.use(express.urlencoded({ extended: true })) = It makes that data available in req.body
 
 res.render("index") - is used to render index.ejs or any page.
 
@@ -26,3 +27,5 @@ mongoose is used to communicate between node server and mongodb server.
 Every mongoose code is asynchronous and we have to use async await for that.
 
 css - we can use required keyword in input field so input cant remain empty
+
+
