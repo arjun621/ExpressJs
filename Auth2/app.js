@@ -22,7 +22,7 @@ app.post("/create", (req, res) => {
     let {username, email, password, age} = req.body;
 
     bcrypt.genSalt(10, (err, salt) => { 
-        bcrypt.hash(password, salt, async(rerr, hash) => {
+        bcrypt.hash(password, salt, async(err, hash) => {
             let createdUser = await userModel.create({
                 username,
                 email,
