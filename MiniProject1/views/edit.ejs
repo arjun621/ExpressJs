@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/edit.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/update/<%= post._id %>" method="post">
+            <h3>You can update post here.</h3>
+            <textarea placeholder="Write here to update." name="content"><%= post.content %></textarea>
+            <input type="submit" value="Click to Submit">
+        </form>
+    </div>
+</body>
+</html>

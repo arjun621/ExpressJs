@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.container {
+    margin: 20px;
+    padding: 10px;
+}
+
+textarea {
+    resize: none;
+    display: block;
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    text-decoration: none;
+}
+
+input {
+    width: 150px;
+    padding: 7px;
+    border-radius: 8px;
+    background-color: rgb(43, 77, 230);
+    margin-top: 5px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+input:hover {
+    background-color: rgb(62, 94, 233);
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
