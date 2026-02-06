@@ -1,0 +1,150 @@
+Mini Project 2: Task Manager with Auth (Todo App+)
+1️⃣ Setup
+
+Create a new folder: MiniProject2.
+
+Inside, initialize a Node.js project:
+
+npm init -y
+
+Install dependencies: express, mongoose, bcrypt, jsonwebtoken, ejs, cookie-parser
+
+Create folders:
+
+models/ → for Mongoose schemas
+
+views/ → for EJS templates
+
+public/ → for CSS
+
+2️⃣ Database Models
+User
+
+Fields:
+
+name, email, password, age
+
+tasks → array of ObjectId references to Task
+
+Each user can have multiple tasks.
+
+Task
+
+Fields:
+
+title, description
+
+status → enum: Pending, inProgress, Completed (default: Pending)
+
+user → reference to User
+
+3️⃣ Pages & Routes
+Home Page (/)
+
+Simple welcome page
+
+Links to Register and Login
+
+Register Page (/register)
+
+Form fields: name, email, password, age
+
+On submit:
+
+Hash password using bcrypt
+
+Create new user in database
+
+Redirect to login
+
+Login Page (/login)
+
+Form fields: email, password
+
+On submit:
+
+Find user by email
+
+Compare password with bcrypt
+
+If valid → generate JWT token → store in cookie
+
+Redirect to dashboard
+
+Dashboard Page (/dashboard)
+
+Show logged-in user’s tasks
+
+Each task:
+
+title, description, status
+
+Buttons for Edit, Delete, Change Status
+
+Option to add a new task
+
+Task CRUD
+
+Add Task → create new task, associate with user
+
+Edit Task → update task title, description, status
+
+Delete Task → remove task and remove reference from user
+
+Change Status → update status enum (Pending → inProgress → Completed)
+
+4️⃣ Middleware
+
+isLoggedIn
+
+Checks if JWT token exists in cookies
+
+Verifies token
+
+Attaches user info to req.user
+
+Redirects to login if not authenticated
+
+5️⃣ Relationships
+
+One user → many tasks (1:N)
+
+Each task references one user
+
+6️⃣ Frontend Notes
+
+Use EJS templates
+
+Basic forms for login, register, task add/edit
+
+Dark theme for all pages
+
+Background: dark gray/black
+
+Text: white or light color
+
+Buttons with subtle contrast
+
+7️⃣ Workflow
+
+User registers → hashed password stored
+
+User logs in → JWT stored in cookie
+
+Dashboard loads user’s tasks using populate
+
+User can create, update, delete, or change status of tasks
+
+Logout → clears JWT cookie
+
+8️⃣ Optional Enhancements
+
+Add a filter for tasks by status (Pending, inProgress, Completed)
+
+Add a “mark as completed” button
+
+Add timestamps for task creation and updates (optional)
+
+Validate forms (email format, password length)
+
+Use flash messages for success/error
