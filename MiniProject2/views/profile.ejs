@@ -17,27 +17,30 @@
     <div class="container">
         <h1>Task Manager</h1>
 
-        <form action="/add-task" method="POST" class="add-task">
-            <input type="text" name="title" placeholder="Task Title" required>
-            <input type="text" name="description" placeholder="Task Description" required>
+        <form action="/addTask" method="POST" class="add-task">
+            <input class="text" type="text" name="title" placeholder="Task Title" required>
+            <input class="text" type="text" name="description" placeholder="Task Description" required>
 
-            <a href="#" class="submit-link" onclick="this.closest('form').submit(); return false;">
-                Add New Task
-            </a>
+            <input class="submit-link" type="submit" value="Add new task">
         </form>
 
-        <div class="task-card">
-            <h3>Task Title</h3>
-            <p>Task Description goes here...</p>
-            <span class="status">Status: Pending</span>
+        <% if(user && user.tasks && user.tasks.length> 0) { %>
+            <% user.tasks.reverse().forEach(task=> { %>
+                <div class="task-card">
+                    <h3><%= task.title %></h3>
+                    <p><%= task.description %></p>
+                    <span class="status">Status: <%= task.status %></span>
 
-            <div class="buttons">
-                <a href="/edit-task/1" class="edit">Edit</a>
-                <a href="/delete-task/1" class="delete">Delete</a>
-                <a href="/change-status/1" class="status-btn">Change Status</a>
-            </div>
-        </div>
-
+                    <div class="buttons">
+                        <a href="/edit-task/<%= task._id %>" class="edit">Edit</a>
+                        <a href="/delete-task/<%= task._id %>" class="delete">Delete</a>
+                        <a href="/change-status/<%= task._id %>" class="status-btn">Change Status</a>
+                    </div>
+                </div>
+                <% }) %>
+                    <% } else { %>
+                        <p>No tasks available</p>
+                        <% } %>
     </div>
 
 </body>
