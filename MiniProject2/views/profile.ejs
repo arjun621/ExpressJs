@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+
+<body>
+
+    <div class="nav">
+        <a class="logout" href="/logout">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        <form action="/add-task" method="POST" class="add-task">
+            <input type="text" name="title" placeholder="Task Title" required>
+            <input type="text" name="description" placeholder="Task Description" required>
+
+            <a href="#" class="submit-link" onclick="this.closest('form').submit(); return false;">
+                Add New Task
+            </a>
+        </form>
+
+        <div class="task-card">
+            <h3>Task Title</h3>
+            <p>Task Description goes here...</p>
+            <span class="status">Status: Pending</span>
+
+            <div class="buttons">
+                <a href="/edit-task/1" class="edit">Edit</a>
+                <a href="/delete-task/1" class="delete">Delete</a>
+                <a href="/change-status/1" class="status-btn">Change Status</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Form Section */
+.add-task {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-task input {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Anchor Button Style */
+.submit-link {
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #6200ea;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.submit-link:hover {
+    background-color: #7c4dff;
+}
+
+/* Task Card */
+.task-card {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.status {
+    display: block;
+    margin: 10px 0;
+    color: #bbbbbb;
+}
+
+/* Action Links */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons a {
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+}
+
+.edit {
+    background-color: #0288d1;
+}
+
+.delete {
+    background-color: #d32f2f;
+}
+
+.status-btn {
+    background-color: #388e3c;
+}
+
+.buttons a:hover {
+    opacity: 0.85;
+}
+
+.nav {
+    display: flex;
+    justify-content: end;
+}
+
+.logout {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    background-color: #d32f2f;
+}
