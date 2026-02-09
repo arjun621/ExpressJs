@@ -26,6 +26,7 @@ mongoose is used to communicate between node server and mongodb server.
 
 Every mongoose code is asynchronous and we have to use async await for that.
 
-css - we can use required keyword in input field so input cant remain empty
+css - we can use required keyword in input field so input cant remain empty.
 
+(req, res) - req stored data sent by user, and res sends data from backend to frontend.
 
